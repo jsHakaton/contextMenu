@@ -6,16 +6,14 @@ export class TimerModule extends Module {
     }
 
     trigger() {
-        document.querySelector(`[data-type=${this.type}]`).addEventListener('click', () => {
-            const userInput = prompt('Введите время в секундах:');
-            const timeInSeconds = parseInt(userInput, 10);
+          const userInput = prompt('Введите время в секундах:');
+          const timeInSeconds = parseInt(userInput, 10);
 
-            if (!isNaN(timeInSeconds) && timeInSeconds > 0) {
-                this.createTimer(timeInSeconds)
-              } else {
-                alert('Пожалуйста, введите корректное число секунд.');
-              }
-        })
+          if (!isNaN(timeInSeconds) && timeInSeconds > 0) {
+              this.createTimer(timeInSeconds)
+            } else {
+              alert('Пожалуйста, введите корректное число секунд.');
+            }
     }
 
     createTimer(seconds) {

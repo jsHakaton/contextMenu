@@ -23,6 +23,11 @@ export class ContextMenu extends Menu {
     add(module) {
         const newElemnt = module.toHTML()
         menu.insertAdjacentHTML('beforeend', newElemnt)
-        module.trigger()
+
+        document.querySelector(`[data-type=${module.type}]`).addEventListener('click', () => {
+            module.trigger()
+            this.close()
+        })
+
     }
 }
