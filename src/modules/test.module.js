@@ -6,8 +6,6 @@ export class TestModule extends Module {
     }
 
     trigger() {
-        document.querySelector(`[data-type=${this.type}]`).addEventListener('click', () => {
-            alert('TEST')
-        })
+        alert('Test')
     }
 }
