@@ -11,13 +11,7 @@ export class ClicksModule extends Module {
         timer.style.pointerEvents='none'
         
         const timerModule = new TimerModule('timer', 'TimerModule');
-        timerModule.createTimer(30, this.type);
-
-        const timerContainer = document.querySelector('.time-container')
-
-        timerContainer.style.left = '0'
-        timerContainer.style.right = 'auto'
-
+        timerModule.createTimer(30, this.type, {left: '0', right: 'auto'});
 
 
         let totalSingleClicks = 0;

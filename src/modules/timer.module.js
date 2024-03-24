@@ -12,15 +12,17 @@ export class TimerModule extends Module {
       if (!isNaN(timeInSeconds) && timeInSeconds > 0) {
           const timer = document.querySelector('[data-type=timer]')
           timer.style.pointerEvents='none'
-          this.createTimer(timeInSeconds, this.type)
+          this.createTimer(timeInSeconds, this.type, {left: 'auto', right: '0'})
         } else {
           alert('Пожалуйста, введите корректное число секунд.');
         }
     }
 
-    createTimer(seconds, type) {
+    createTimer(seconds, type, styles) {
         const timerContainer = document.createElement('div')
         timerContainer.classList.add('timer-container')
+        timerContainer.style.left = styles.left
+        timerContainer.style.right = styles.right
         document.body.insertAdjacentElement('afterbegin', timerContainer)
 
         const clockElement = document.createElement('div');

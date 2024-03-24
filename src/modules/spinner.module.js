@@ -14,8 +14,7 @@ export class SpinnerModule extends Module {
         }
         const spinnerHTML = spinnerBlock()
         body.append(spinnerHTML)
-        // document.body.insertAdjacentElement('afterbegin', spinnerHTML)
-        setTimeout(() => { spinnerHTML.remove() }, 50000)
+        setTimeout(() => { spinnerHTML.remove() }, 20000)
 
     }
 }

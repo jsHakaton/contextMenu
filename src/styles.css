@@ -45,11 +45,8 @@ body {
     padding: 5px;
     position: fixed;
     top: 0;
-    right: 0;
     z-index: 500;
     display: flex;
-    /* justify-content: flex-end;
-    align-items: flex-start; */
     height: 100px;
 }
   
@@ -63,14 +60,6 @@ body {
     background-color: white;
     box-shadow: 0 0 10px black;
 }
-/* ---- */
-
-/* 
-    CSS Spinner Project. 
-    The idea is taken from here:
-    https://youtu.be/ttWXapXj4cg
-    @zolv | 2022 
-*/
 
 :root {
     --size: 20px;
@@ -78,12 +67,6 @@ body {
     --bg-color: #061275;
     --color: #325eef;
 }
-
-/* * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} */
 
 .spinner-container {
     top: 0;
