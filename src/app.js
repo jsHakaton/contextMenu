@@ -5,6 +5,7 @@ import { BackgroundModule } from './modules/background.module'
 import { SoundModule } from './modules/sound.module'
 import { CatModule } from './modules/cat.module'
 import { ShapeModule } from './modules/shape.module'
+import { ClicksModule } from './modules/clicks.module'
 
 
 const timerModule = new TimerModule('timer', 'TimerModule')
@@ -12,6 +13,7 @@ const backgroundModule = new BackgroundModule('background', 'Random background')
 const soundModule = new SoundModule('sound', 'Random sound')
 const catModule = new CatModule('cat', 'Add Cat')
 const shapeModule = new ShapeModule('shape', 'Add spinner')
+const clicksModule = new ClicksModule('clicks', 'Click statistics')
 
 
 const contextMenu = new ContextMenu('.menu')
