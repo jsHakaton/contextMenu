@@ -89,11 +89,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-<<<<<<< HEAD
     background: var(--bg-color);
-=======
-    background: var(--bg-color);    
->>>>>>> feature/spinner-module
     height: 80vh;
     animation: color 8s linear infinite;
 }
