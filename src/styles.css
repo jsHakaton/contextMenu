@@ -42,6 +42,11 @@ body {
 }
 
 .timer-container {
+    padding: 5px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 500;
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
@@ -58,3 +63,13 @@ body {
     background-color: white;
     box-shadow: 0 0 10px black;
 }
+
+.image-container {
+    opacity: 0;
+    animation: ani 2.5s forwards;
+  }
+  
+  @keyframes ani {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
