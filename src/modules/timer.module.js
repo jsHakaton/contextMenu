@@ -6,14 +6,16 @@ export class TimerModule extends Module {
     }
 
     trigger() {
-          const userInput = prompt('Введите время в секундах:');
-          const timeInSeconds = parseInt(userInput, 10);
+      const userInput = prompt('Введите время в секундах:');
+      const timeInSeconds = parseInt(userInput, 10);
 
-          if (!isNaN(timeInSeconds) && timeInSeconds > 0) {
-              this.createTimer(timeInSeconds)
-            } else {
-              alert('Пожалуйста, введите корректное число секунд.');
-            }
+      if (!isNaN(timeInSeconds) && timeInSeconds > 0) {
+          const timer = document.querySelector('[data-type=timer]')
+          timer.style.pointerEvents='none'
+          this.createTimer(timeInSeconds)
+        } else {
+          alert('Пожалуйста, введите корректное число секунд.');
+        }
     }
 
     createTimer(seconds) {
@@ -42,6 +44,10 @@ export class TimerModule extends Module {
           if (timeLeft < 0) {
             clearInterval(timerInterval);
             clockElement.textContent = '00:00:00';
+
+            const btn = document.querySelector('[data-type=timer]')
+            btn.style.pointerEvents='auto'
+
             setTimeout(() => {
                 // clockElement.style.display = 'none';
                 timerContainer.remove()
