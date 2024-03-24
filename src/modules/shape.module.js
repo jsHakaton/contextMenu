@@ -8,9 +8,13 @@ export class ShapeModule extends Module {
 
     trigger() {
         const body = document.querySelector('body')
+        const spinnerContainer = document.querySelector('.spinner-container')
+        if (spinnerContainer) {
+            spinnerContainer.remove()
+        }
         const spinnerHTML = spinnerBlock()
         body.append(spinnerHTML)
         setTimeout(() => { spinnerHTML.remove() }, 5000)
-        
+
     }
 }
