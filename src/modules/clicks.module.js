@@ -6,9 +6,20 @@ export class ClicksModule extends Module {
         super(type, text);
     }
 
-    trigger() {            
+    trigger() {
+        const timer = document.querySelector('[data-type=clicks]')
+        timer.style.pointerEvents='none'
+        
         const timerModule = new TimerModule('timer', 'TimerModule');
-        timerModule.createTimer(10);
+        timerModule.createTimer(30, this.type);
+
+        const timerContainer = document.querySelector('.time-container')
+
+        timerContainer.style.left = '0'
+        timerContainer.style.right = 'auto'
+
+
+
         let totalSingleClicks = 0;
         let totalDoubleClicks = 0;
 
@@ -27,16 +38,14 @@ export class ClicksModule extends Module {
             alert(`Всего одинарных кликов: ${totalSingleClicks}. Всего двойных кликов: ${totalDoubleClicks}.`)
             totalSingleClicks = 0;
             totalDoubleClicks = 0;                
-        }, 11500)  
+        }, 31500)  
         
         function onClick() {
             totalSingleClicks += 1;
-            console.log('Одиночный клик')
         }
 
         function onDoubleClick() {
             totalDoubleClicks += 1;
-            console.log('Двойной клик');
         }
     }
 

@@ -12,13 +12,13 @@ export class TimerModule extends Module {
       if (!isNaN(timeInSeconds) && timeInSeconds > 0) {
           const timer = document.querySelector('[data-type=timer]')
           timer.style.pointerEvents='none'
-          this.createTimer(timeInSeconds)
+          this.createTimer(timeInSeconds, this.type)
         } else {
           alert('Пожалуйста, введите корректное число секунд.');
         }
     }
 
-    createTimer(seconds) {
+    createTimer(seconds, type) {
         const timerContainer = document.createElement('div')
         timerContainer.classList.add('timer-container')
         document.body.insertAdjacentElement('afterbegin', timerContainer)
@@ -45,7 +45,7 @@ export class TimerModule extends Module {
             clearInterval(timerInterval);
             clockElement.textContent = '00:00:00';
 
-            const btn = document.querySelector('[data-type=timer]')
+            const btn = document.querySelector(`[data-type=${type}]`)
             btn.style.pointerEvents='auto'
 
             setTimeout(() => {
