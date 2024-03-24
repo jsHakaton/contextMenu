@@ -6,6 +6,7 @@ import { SoundModule } from './modules/sound.module'
 import { CatModule } from './modules/cat.module'
 import { MoreCatsModule } from './modules/moreCats.module'
 import { SpinnerModule } from './modules/spinner.module'
+import { ClicksModule } from './modules/clicks.module'
 
 
 const timerModule = new TimerModule('timer', 'TimerModule')
@@ -14,6 +15,7 @@ const soundModule = new SoundModule('sound', 'Random sound')
 const catModule = new CatModule('cat', 'Add Cat')
 const moreCatsModule = new MoreCatsModule('moreCats', 'More Cats')
 const spinnerModule = new SpinnerModule ('spinner', 'Add spinner')
+const clicksModule = new ClicksModule('clicks', 'Click statistics')
 
 
 const contextMenu = new ContextMenu('.menu')
@@ -23,3 +25,4 @@ contextMenu.add(soundModule)
 contextMenu.add(catModule)
 contextMenu.add(moreCatsModule)
 contextMenu.add(spinnerModule)
+contextMenu.add(clicksModule)
