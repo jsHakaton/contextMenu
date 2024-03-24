@@ -13,9 +13,6 @@ export class CatModule extends Module {
         let coordinates = this.generateRandomCoordinates();
         const catNumber = random(1,9)
 
-        console.log(coordinates.x)
-        console.log(coordinates.y)
-
         const imageContainer = document.createElement('div')
         imageContainer.classList.add('image-container')
         document.body.appendChild(imageContainer)

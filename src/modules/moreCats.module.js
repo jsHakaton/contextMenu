@@ -27,14 +27,9 @@ export class MoreCatsModule extends Module {
         const y = window.innerHeight
         const countColums = Math.trunc(x / 100)
         const countRows = Math.trunc(y / 100)
-
-        console.log(x, y)
-        console.log(countColums, countRows)
         
         for (let i = 0; i < countRows; i++) {
-                console.log('New string', i)
             for (let j = 0; j < countColums; j++) {
-
                 const catNumber = random(1,9)
                 const img = document.createElement('img');
                 img.src = `../../assets/images/cat_${catNumber}.svg`;
@@ -42,7 +37,6 @@ export class MoreCatsModule extends Module {
                 img.style.width = '100px'
                 img.style.height = '100px'
                 imageContainer.append(img);
-
             }
         }
     }

@@ -9,13 +9,13 @@ import { SpinnerModule } from './modules/spinner.module'
 import { ClicksModule } from './modules/clicks.module'
 
 
-const timerModule = new TimerModule('timer', 'TimerModule')
-const backgroundModule = new BackgroundModule('background', 'Random background')
-const soundModule = new SoundModule('sound', 'Random sound')
-const catModule = new CatModule('cat', 'Add Cat')
-const moreCatsModule = new MoreCatsModule('moreCats', 'More Cats')
-const spinnerModule = new SpinnerModule ('spinner', 'Add spinner')
-const clicksModule = new ClicksModule('clicks', 'Click statistics')
+const timerModule = new TimerModule('timer', 'Таймер отсчета')
+const backgroundModule = new BackgroundModule('background', 'Случайный фон')
+const soundModule = new SoundModule('sound', 'Случайный звук')
+const catModule = new CatModule('cat', 'Случайный котик')
+const moreCatsModule = new MoreCatsModule('moreCats', 'Больше котиков!')
+const spinnerModule = new SpinnerModule ('spinner', 'Спиннер')
+const clicksModule = new ClicksModule('clicks', 'Аналитика кликов')
 
 
 const contextMenu = new ContextMenu('.menu')
