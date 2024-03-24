@@ -6,19 +6,16 @@ export class TimerModule extends Module {
     }
 
     trigger() {
-      const btn = document.querySelector('[data-type=timer]')
-      if(document.querySelector('.timer-container')) {
-        btn.style.pointerEvents='none'
-      } else {
-        const userInput = prompt('Введите время в секундах:');
-        const timeInSeconds = parseInt(userInput, 10);
+      const userInput = prompt('Введите время в секундах:');
+      const timeInSeconds = parseInt(userInput, 10);
 
-        if (!isNaN(timeInSeconds) && timeInSeconds > 0) {
-            this.createTimer(timeInSeconds)
-          } else {
-            alert('Пожалуйста, введите корректное число секунд.');
-          }
-      }
+      if (!isNaN(timeInSeconds) && timeInSeconds > 0) {
+          const timer = document.querySelector('[data-type=timer]')
+          timer.style.pointerEvents='none'
+          this.createTimer(timeInSeconds)
+        } else {
+          alert('Пожалуйста, введите корректное число секунд.');
+        }
     }
 
     createTimer(seconds) {
