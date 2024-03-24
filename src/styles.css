@@ -45,7 +45,7 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
-    height: 100vh;
+    height: 100px;
 }
   
 .clock {
@@ -84,8 +84,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background: var(--bg-color); */
-    height: 100vh;
+    background: var(--bg-color);
+    height: 80vh;
     animation: color 8s linear infinite;
 }
 
