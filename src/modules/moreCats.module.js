@@ -16,6 +16,7 @@ export class MoreCatsModule extends Module {
         const imageContainer = document.createElement('div')
         imageContainer.classList.add('image-container')
         imageContainer.style.display = 'flex'
+        imageContainer.style.position = 'fixed'
         imageContainer.style.flexWrap = 'wrap'
         imageContainer.style.zIndex = '2'
         imageContainer.style.justifyItems = 'center'
@@ -23,7 +24,7 @@ export class MoreCatsModule extends Module {
         document.body.appendChild(imageContainer)
 
 
-        const x = window.innerWidth - 100
+        const x = window.innerWidth
         const y = window.innerHeight
         const countColums = Math.trunc(x / 100)
         const countRows = Math.trunc(y / 100)

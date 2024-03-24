@@ -86,11 +86,15 @@ body {
 } */
 
 .spinner-container {
+    top: 0;
+    left: 0;
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--bg-color);
-    height: 80vh;
+    /* background: var(--bg-color); */
+    height: 100%;
+    width: 100%;
     animation: color 8s linear infinite;
 }
 

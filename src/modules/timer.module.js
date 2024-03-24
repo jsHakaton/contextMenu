@@ -21,7 +21,7 @@ export class TimerModule extends Module {
     createTimer(seconds) {
         const timerContainer = document.createElement('div')
         timerContainer.classList.add('timer-container')
-        document.body.appendChild(timerContainer)
+        document.body.insertAdjacentElement('afterbegin', timerContainer)
 
         const clockElement = document.createElement('div');
         clockElement.classList.add('clock')
